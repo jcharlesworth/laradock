@@ -8,8 +8,10 @@ services:
         image: tianon/true
         volumes:
             - ../csm/:/var/www/csm
+            - ../new-csm/:/var/www/new-csm
             - ../alpha/:/var/www/alpha
             - ../forum/:/var/www/forum
+            - ../portal/:/var/www/portal
 
 ### Workspace Utilities Container ###########################
 
