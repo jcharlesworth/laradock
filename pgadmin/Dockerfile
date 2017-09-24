@@ -1,4 +1,4 @@
-FROM fenglc/pgadmin4
+FROM fenglc/pgadmin4:2
 
 MAINTAINER Huadong Zuo <admin@zuohuadong.cn>
 
