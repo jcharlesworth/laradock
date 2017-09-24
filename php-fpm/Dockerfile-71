@@ -280,14 +280,9 @@ RUN if [ ${INSTALL_MSSQL} = true ]; then \
         && curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list \
         && apt-get update -yqq \
 
-<<<<<<< HEAD
-    pecl install sqlsrv-4.1.7preview && \
-    pecl install pdo_sqlsrv-4.1.7preview && \
-=======
     # Install Dependencies
         && ACCEPT_EULA=Y apt-get install -y unixodbc unixodbc-dev libgss3 odbcinst msodbcsql locales \
         && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && locale-gen \
->>>>>>> dcab211b073ac427d71f94a9c9ffe7e876b8a5f5
 
     # Install pdo_sqlsrv and sqlsrv from PECL. Replace pdo_sqlsrv-4.1.8preview with preferred version.
         && pecl install pdo_sqlsrv-4.1.8preview sqlsrv-4.1.8preview \

@@ -12,6 +12,7 @@ services:
             - ../alpha/:/var/www/alpha
             - ../forum/:/var/www/forum
             - ../portal/:/var/www/portal
+            - ../ticketbeast/:/var/www/ticketbeast
 
 ### Workspace Utilities Container ###########################
 
@@ -275,7 +276,8 @@ services:
     postgres:
       build: ./postgres
       volumes:
-        - ${DATA_SAVE_PATH}/postgres:/var/lib/postgresql/data
+        # - ${DATA_SAVE_PATH}/postgres:/var/lib/postgresql/data
+        - dev-postgresql:/var/lib/postgresql/data
       ports:
         - "${POSTGRES_PORT}:5432"
       environment:
@@ -654,8 +656,8 @@ volumes:
     driver: "local"
   mssql:
     driver: "local"
-  postgres:
-    driver: "local"
+  #postgres:
+    # driver: "local"
   memcached:
     driver: "local"
   redis:
@@ -682,3 +684,6 @@ volumes:
     driver: "local"
   elasticsearch-plugins:
     driver: "local"
+  dev-postgresql:
+    external: true
+    

@@ -113,30 +113,22 @@ COPY ./aliases.sh /home/laradock/aliases.sh
 RUN echo "" >> ~/.bashrc && \
     echo "# Load Custom Aliases" >> ~/.bashrc && \
     echo "source /home/laradock/aliases.sh" >> ~/.bashrc && \
-<<<<<<< HEAD
-    echo "" >> ~/.bashrc && \
-    sed -i 's/\r//' /home/laradock/aliases.sh && \
-    sed -i 's/^#! \/bin\/sh/#! \/bin\/bash/' /home/laradock/aliases.sh
-    
-=======
+
 	echo "" >> ~/.bashrc && \
 	sed -i 's/\r//' /home/laradock/aliases.sh && \
 	sed -i 's/^#! \/bin\/sh/#! \/bin\/bash/' /home/laradock/aliases.sh
 
->>>>>>> dcab211b073ac427d71f94a9c9ffe7e876b8a5f5
+
 USER root
 RUN echo "" >> ~/.bashrc && \
     echo "# Load Custom Aliases" >> ~/.bashrc && \
     echo "source /home/laradock/aliases.sh" >> ~/.bashrc && \
-<<<<<<< HEAD
-    echo "" >> ~/.bashrc && \
-    sed -i 's/\r//' /home/laradock/aliases.sh && \
-    sed -i 's/^#! \/bin\/sh/#! \/bin\/bash/' /home/laradock/aliases.sh
-=======
+
+
 	echo "" >> ~/.bashrc && \
 	sed -i 's/\r//' /home/laradock/aliases.sh && \
 	sed -i 's/^#! \/bin\/sh/#! \/bin\/bash/' /home/laradock/aliases.sh
->>>>>>> dcab211b073ac427d71f94a9c9ffe7e876b8a5f5
+
 
 #####################################
 # xDebug:
